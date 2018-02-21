@@ -7,4 +7,4 @@ The `roles` table will have three columns :
  * A `createdAt` column to automatically store the date of creation of the element.
  * A `label` column where we will store the role name
 
-The `id` column will be automatically incremented to avaoid need of select lastest id.  
+The `id` column will be automatically incremented to avoid need of select lastest id.  
