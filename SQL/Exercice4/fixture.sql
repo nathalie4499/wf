@@ -7,6 +7,7 @@ CREATE TABLE Person (
   UNIQUE INDEX (id)
 ) type=InnoDB;
 
+USE test;
 CREATE TABLE Address (
   id              int(10) NOT NULL AUTO_INCREMENT, 
   address_field_1 varchar(255) NOT NULL, 
