@@ -1,22 +1,27 @@
 <?php
 
-$booleanTrue;
-$booleanFalse;
+$booleanTrue = TRUE;
+$booleanFalse = FALSE;
 
-$int;
+$int = 123132131;
 
-$float;
+$float = 2122121.5;
 
-$integer;
+$integer = 2132132321;
 
-$double;
+$double = 3.844e11;
 
-$string;
+$string = "hello";
 
-$array;
+$array = ["hello", 2121212];
 
-$doubleDimenssionArray;
+$doubleDimenssionArray = [
+    "toto" => ["titi", "hello"],
+    "tata" => ["tutu", "mama"]
+];
 
-$associativeArray;
+$associativeArray = [ 
+    "foo"
+];
 
-$null;
+$null = NULL;
