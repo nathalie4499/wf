@@ -4,7 +4,7 @@ One evening, two brothers take advantage of their parents' absence to order burg
 
 The objective of this challenge is to determine who will not go down the trash tonight (winner of the game).
 
-We will name the two brothers A and B. For simplicity, we will consider that the cards have values ​​ranging from 1 to 10. We guarantee that there is a winner at the end of the game (no possible equality between the two players).
+We will name the two brothers A and B. For simplicity, we will consider that the cards have values ranging from 1 to 10. We guarantee that there is a winner at the end of the game (no possible equality between the two players).
 
 In the $input variable, you will find an array with two dimention representing the set of turn, with the cards of each players. You must set 'A' or 'B' in the $winner variable to point out the winner.
 
