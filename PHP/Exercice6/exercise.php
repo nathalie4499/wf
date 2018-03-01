@@ -9,9 +9,9 @@ function easterReverse($path) {
     $secondPart = substr($fileContent, $middleFile);
     //echo $secondPart;
     $reversePart = strrev($secondPart);
-    echo $reversePart;
-    $finalPart = substr_replace ($secondPart, $reversePart, 0);
-    $easteregg = $fileContent - $secondPart + $reversePart;
+    //echo $reversePart;
+    substr_replace ($secondPart, $reversePart, $secondStart);
+    echo $easteregg;
 
-fclose($easteregg);
+    fclose($easteregg);
 }
