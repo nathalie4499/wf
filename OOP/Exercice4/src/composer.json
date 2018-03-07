@@ -1,0 +1,12 @@
+{
+    "name": "myproject/exo4",
+    "require": {
+        "symfony/security": "^4.0"
+    },
+    "authors": [
+        {
+            "name": "nathalie4499",
+            "email": "nathalie.montois@outlook.com"
+        }
+    ]
+}
