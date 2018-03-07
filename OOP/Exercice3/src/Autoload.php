@@ -12,21 +12,21 @@ spl_autoload_register(
       }
 );
 
-use Model\Role;
-use Model\User;
-use Model\Person;
+//exercice precedent
+//use Model\Role;
+//use Model\User;
+//use Model\Person;
 
-$user = new User();
-$role = new Role(Role::ROLE_USER || Role::ROLE_ADMIN);
+//$user = new User();
+//$role = new Role(Role::ROLE_USER);
 
-$user->setPassword('myPassword')
-    ->setRoles([$role])
-    ->setSalt('mySalt')
-    ->setUsername('myUsername');
+//$user->setPassword('myPassword')
+//   ->setRoles([$role])
+//    ->setSalt('mySalt')
+//    ->setUsername('myUsername');
+//
+//$person = new Person();
+//$person->setFirstname('Eric')
+//       ->setLastname('Montecalvo')
+//       ->setEmails(['eric.montecalvo@example.org']);
 
-$person = new Person();
-$person->setFirstname('Eric')
-       ->setLastname('Montecalvo')
-       ->setEmails(['eric.montecalvo@example.org']);
-
-       //The Model\Role class MUST be updated to throw the exception on setting a Role label that is not contained in the constants.
