@@ -8,5 +8,12 @@
             "name": "nathalie4499",
             "email": "nathalie.montois@outlook.com"
         }
-    ]
+    ],
+    "autoload":{
+    	"psr-4": {
+    		"": "",
+    		"Model\\": "Model/",
+    		"Exception\\": "Exception/"
+    	}
+    }
 }
