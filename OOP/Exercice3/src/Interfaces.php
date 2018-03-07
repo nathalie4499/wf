@@ -5,9 +5,7 @@
 
 interface ArrayInterface extends Countable, ArrayAccess 
 {
-
-    
-    
+ 
 
 }
 class ArrayElement implements ArrayInterface
