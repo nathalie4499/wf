@@ -12,7 +12,14 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password2Success = ($password2 === $password1);
     
     if($nameSuccess && $phoneSuccess && $password1Success) {
-        $connection = new PDO('mysql:host=localhost;dbname=register', 'root');
+        try {
+            $connection = new PDO('mysql:host=localhost;dbname=register', 'root');
+        } catch (PDOException $exception) {
+            http_response_code(500);
+            echo 'A problem occurred, contact support';
+            exit(10);
+        }
+        
         echo 'data success';
         return;
     } else {
