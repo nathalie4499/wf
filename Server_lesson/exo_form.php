@@ -20,7 +20,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit(10);
         }
         $sql = "INSERT INTO user(username, password) VALUES (\"$name\", \"$password1\")";
-        $connection->exec($sql);   
+        $affected = $connection->exec($sql);   
+        if (!$affected) {
+            echo implode(', ', $connection->errorInfo());
+            return;
+        }
         echo 'data success';
         return;
     } else {
