@@ -45,4 +45,5 @@ public static function getConnection(){
          self::createConnection();
     }
     return self::$connection;
+    }
 }

@@ -1,5 +1,5 @@
 <?php
-includde_once __DIR__.'/init.php';
+include_once __DIR__.'/init.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     
     $username = $_POST['username'] ?? null;
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 			<label for="password_1">Your password :</label>
 			<input type="password" name="password_1" />
 			<br/>
-			
+			 	
 			<label for="password_2">Retype your password :</label>
 			<input type="password" name="password_2"/>
 			<br/>

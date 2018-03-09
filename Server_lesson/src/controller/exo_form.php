@@ -15,7 +15,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     if($nameSuccess && $phoneSuccess && $password1Success) {
         try {
-            //$connection = new PDO('mysql:host=localhost;dbname=register', 'root'); //or 
+            //$connection = new PDO('mysql:host=localhost;dbname=register', 'root'); //or
             $connection = Service\DBConnector::getConnection();
         } catch (PDOException $exception) {
             http_response_code(500);
@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit(10);
         }
         $sql = "INSERT INTO user(username, password) VALUES (\"$name\", \"$password1\")";
-        $affected = $connection->exec($sql);   
+        $affected = $connection->exec($sql);
         if (!$affected) {
             echo implode(', ', $connection->errorInfo());
             return;

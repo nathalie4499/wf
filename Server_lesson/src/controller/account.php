@@ -41,7 +41,8 @@ if (!$displayAccountId || !is_numeric($displayAccountId)){
 	<?php 
 } else {
     try {
-        $connection = new PDO('mysql:host=localhost;dbname=register', 'root');
+        //$connection = new PDO('mysql:host=localhost;dbname=register', 'root'); before installation of require
+        $connection = Service\DBConnector::getConnection();
     } catch (PDOException $exception) {
         http_response_code(500);
         echo 'A problem occured, contact support';
