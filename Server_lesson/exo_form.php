@@ -25,6 +25,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo implode(', ', $connection->errorInfo());
             return;
         }
+        
         echo 'data success';
         return;
     } else {
