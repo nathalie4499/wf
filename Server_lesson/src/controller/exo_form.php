@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+include_once __DIR__.'init.php';
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'] ?? null;
@@ -13,11 +15,18 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     if($nameSuccess && $phoneSuccess && $password1Success) {
         try {
-            $connection = new PDO('mysql:host=localhost;dbname=register', 'root');
+            //$connection = new PDO('mysql:host=localhost;dbname=register', 'root'); //or 
+            $connection = Service\DBConnector::getConnection();
         } catch (PDOException $exception) {
             http_response_code(500);
             echo 'A problem occurred, contact support';
             exit(10);
+        }
+        $sql = "INSERT INTO user(username, password) VALUES (\"$name\", \"$password1\")";
+        $affected = $connection->exec($sql);   
+        if (!$affected) {
+            echo implode(', ', $connection->errorInfo());
+            return;
         }
         
         echo 'data success';
@@ -34,13 +43,13 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>Please register</title>
-</head>
-<body>
-
-	<form method="POST">
+	<head>
+		<meta charset="UTF-8">
+		<title>Register here</title>
+	</head>
+    <body>
+	    
+	   <form method="POST">
 		<label for="name" >Please give your name:</label>
 		<input type="text" name="name" value="<?php echo htmlentities($name ?? ""); ?>" />
 		<br/>
@@ -67,7 +76,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 	</form>
 
 
-</body>
+	</body>
 
 
 </html>

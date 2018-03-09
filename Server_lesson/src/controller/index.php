@@ -1,6 +1,6 @@
 <?php 
-$currentTimeSlot = (new DateTime())->format('H');
 
+$currentTimeSlot = (new DateTime())->format('H');
 if ($currentTimeSlot < 12) {
     $toDisplay = 'Good morning';
 } else if ($currentTimeSlot < 18) {
@@ -22,20 +22,14 @@ $range = range(0, 10);
 //} else {
 //    $lastname = 'Doe';
 //}
-
 //or
-
 $firstname = $_GET['firstname'] ?? 'John';
 $firstname = htmlentities($firstname);
-
 $lastname = $_GET['lastname'] ?? 'Doe';
 $lastname = htmlentities($lastname);
-
-// or 
+// or
 //$lastname = htmlentities($_GET['lastname'] ?? 'Doe');
-
 ///////////////////////
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -63,3 +57,4 @@ $lastname = htmlentities($lastname);
 		
 	</body>
 </html>
+

@@ -1,0 +1,17 @@
+{
+    "name": "etudiant/server_lesson",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "nathalie4499",
+            "email": "nathalie.montois@outlook.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+    "psr-4": {
+    	"":"src/"
+    	}
+    }
+}    
